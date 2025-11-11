@@ -1,4 +1,3 @@
-// src/Header.jsx
 import React from 'react';
 
 const Header = () => {

@@ -1,7 +1,5 @@
-// src/Card.jsx
 import React from 'react';
 
-// 1. Terima prop { onClick }
 const Card = ({ title, icon, onClick }) => {
   return (
     <div className="card">
@@ -10,7 +8,6 @@ const Card = ({ title, icon, onClick }) => {
       </div>
       <div className="card-content">
         <h3>{title}</h3>
-        {/* 2. Tambahkan event onClick di sini */}
         <button type="button" className="btn" onClick={onClick}>
           Read More
         </button>

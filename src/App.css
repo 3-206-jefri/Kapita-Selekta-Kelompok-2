@@ -1,28 +1,68 @@
-// src/App.jsx
-import React from 'react';
-import Header from './Header';
-import Hero from './Hero';
-import CardGrid from './CardGrid';
-import Footer from './Footer';
-
-function App() {
-  return (
-    <> {/* Fragment */}
-      {/* Header dipindahkan ke luar container */}
-      <Header />
-
-      <div className="container">
-        <main>
-          <Hero />
-          <h2 className="section-title">Lorem Ipsum</h2>
-          <CardGrid />
-        </main>
-      </div>
-      
-      {/* Footer sudah di luar */}
-      <Footer />
-    </>
-  );
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; 
+  background-color: #ffffff; 
+  color: #000000;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem; 
 }
 
-export default App;
+.header-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.header-nav {
+  display: flex;
+  gap: 2rem; 
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+}
+
+.header-nav a:hover {
+  color: #007bff; 
+}
+
+.header-button .btn-primary {
+  background-color: #007bff; 
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px; 
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.header-button .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.hero {
+  text-align: center; 
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.hero-text h1 {
+  font-size: 4rem; 
+  line-height: 1.1;
+  color: #000000; 
+  margin-bottom: 1.5rem;
+  font-weight: 900; 
+}
+
+.hero-map {
+  display: none; 
+}

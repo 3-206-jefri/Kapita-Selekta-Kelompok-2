@@ -1,13 +1,11 @@
-/* src/index.css */
-
 /* --- 1. RESET GLOBAL & LATAR BELAKANG --- */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: #213547; /* Teks gelap */
-  background-color: #ffffff; /* Latar belakang putih */
+  color: #213547; 
+  background-color: #ffffff; 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +19,7 @@
 body {
   min-width: 320px;
   min-height: 100vh;
-  overflow-x: hidden; /* Mencegah scroll horizontal */
+  overflow-x: hidden; 
 }
 
 /* --- 2. LAYOUT UTAMA --- */
@@ -88,7 +86,7 @@ body {
   margin: 0 auto;
   padding: 0 2rem;
   position: relative; 
-  z-index: 3; /* Memastikan judul di atas background */
+  z-index: 3;
 }
 .hero-text {
   text-align: center;
@@ -105,15 +103,11 @@ body {
   width: 100%;
   display: grid;
   place-items: center;
-  padding: 4rem 2rem; /* Padding agar pas di dalam container */
+  padding: 4rem 2rem;
   overflow: hidden;
-  z-index: 1; /* Di bawah judul */
-  
-  /* ▼ INI BAGIAN BARUNYA ▼ */
+  z-index: 1;
   background: linear-gradient(to right, #c90c7a, #005da5);
-  border-radius: 120px; /* Sudut rounded untuk seluruh background */
-  
-  /* Menyesuaikan margin agar pas di dalam .container */
+  border-radius: 120px;
   max-width: 1280px;
   margin: 0 auto 3rem auto;
 }
@@ -124,7 +118,7 @@ body {
   background-color: #333;
   padding: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  z-index: 3; /* Di atas background */
+  z-index: 3; 
   overflow: hidden;
   height: 350px;
 }
@@ -140,11 +134,10 @@ body {
   left: 0;
   width: 50%;
   height: 100%;
-  background-color: #c90ca0; /* Warna ungu/pink muda */
-  /* ▼ PERBAIKAN: rounded di kanan bawah dan kanan atas ▼ */
+  background-color: #c90ca0; 
   border-top-right-radius: 120px;
   border-bottom-right-radius: 120px;
-  z-index: 2; /* Di bawah peta */
+  z-index: 2; 
 }
 .swoosh-right {
   position: absolute;
@@ -152,23 +145,22 @@ body {
   right: 0;
   width: 50%;
   height: 100%;
-  background-color: #005da5; /* Warna biru muda */
-  /* ▼ PERBAIKAN: rounded di kiri bawah dan kiri atas ▼ */
+  background-color: #005da5; 
   border-top-left-radius: 120px;
   border-bottom-left-radius: 120px;
-  z-index: 2; /* Di bawah peta */
+  z-index: 2; 
 }
 
 /* --- 5. CARD GRID (6 Kartu) --- */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 2.5rem;
   margin-bottom: 3rem;
 }
 @media (max-width: 900px) {
   .card-grid {
-    grid-template-columns: 1fr; /* 1 kolom di HP */
+    grid-template-columns: 1fr; 
     gap: 2rem;
     max-width: 400px;
     margin-left: auto;
@@ -178,9 +170,9 @@ body {
 
 /* --- 6. CARD (Desain Sesuai image_3409be.png) --- */
 .card {
-  background-color: #f4f6f9; /* Latar belakang abu-abu muda */
+  background-color: #f4f6f9; 
   border-radius: 16px;
-  border: 1px solid #e0e0e0; /* Border abu-abu tipis */
+  border: 1px solid #e0e0e0; 
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -191,11 +183,11 @@ body {
   transform: translateY(-5px);
 }
 .card-icon {
-  background-color: #f4f6f9; /* Latar belakang sama dengan kartu */
+  background-color: #f4f6f9; 
   padding: 2.5rem;
   display: grid;
   place-items: center;
-  min-height: 150px; /* Tinggi placeholder ikon */
+  min-height: 150px; 
 }
 .card-icon img {
   width: 60px;
@@ -204,7 +196,7 @@ body {
   opacity: 0.7;
 }
 .card-content {
-  background-color: #ffffff; /* Konten di dalam kotak putih */
+  background-color: #ffffff; 
   padding: 1.5rem;
   text-align: center;
   flex-grow: 1;
@@ -225,7 +217,7 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   border-radius: 8px;
-  border: 1px solid #007bff; /* Tombol outline biru */
+  border: 1px solid #007bff; 
   background-color: transparent;
   color: #007bff;
   cursor: pointer;
@@ -326,46 +318,33 @@ body {
   }
 }
 
-/* src/index.css (Tambahkan di bagian paling bawah) */
-
 /* --- 8. MODAL (POP-UP) --- */
 
 .modal-overlay {
-  position: fixed; /* Tetap di layar bahkan saat di-scroll */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang hitam transparan */
-  
-  /* Efek blur (sesuai gambar Anda) */
+  background-color: rgba(0, 0, 0, 0.5); 
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-
-  /* Tampilkan di tengah */
   display: grid;
   place-items: center;
-  
-  /* Pastikan di atas segalanya */
   z-index: 1000;
-  
-  /* Padding untuk di HP */
   padding: 1rem;
 }
 
 .modal-content {
   background-color: #ffffff;
-  color: #213547; /* Teks gelap */
+  color: #213547; 
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 600px; /* Lebar maksimum modal */
-  
-  /* Z-index di atas overlay */
+  max-width: 600px; 
   z-index: 1001;
 
-  /* Tata letak di dalam modal */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -383,21 +362,21 @@ body {
 }
 
 .modal-close-btn {
-  /* Mengambil style dari .card-content .btn tapi sedikit diubah */
   padding: 0.6em 1.2em;
   font-size: 0.9rem;
   font-weight: 500;
   border-radius: 8px;
-  border: 1px solid #c90c7a; /* Warna pink dari footer */
-  background-color: #c90c7a;
+  
+  border: none;
+  background: linear-gradient(to right, #c90c7a, #005da5); 
+  transition: filter 0.25s; 
+
   color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.25s, color 0.25s;
-  align-self: flex-end; /* Pindahkan tombol ke kanan */
+  align-self: flex-end; 
   margin-top: 1rem;
 }
 
 .modal-close-btn:hover {
-  background-color: #a10a62;
-  border-color: #a10a62;
+  filter: brightness(1.15); 
 }
