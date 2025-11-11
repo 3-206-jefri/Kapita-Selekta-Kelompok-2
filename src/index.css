@@ -325,3 +325,79 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* src/index.css (Tambahkan di bagian paling bawah) */
+
+/* --- 8. MODAL (POP-UP) --- */
+
+.modal-overlay {
+  position: fixed; /* Tetap di layar bahkan saat di-scroll */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang hitam transparan */
+  
+  /* Efek blur (sesuai gambar Anda) */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  /* Tampilkan di tengah */
+  display: grid;
+  place-items: center;
+  
+  /* Pastikan di atas segalanya */
+  z-index: 1000;
+  
+  /* Padding untuk di HP */
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  color: #213547; /* Teks gelap */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px; /* Lebar maksimum modal */
+  
+  /* Z-index di atas overlay */
+  z-index: 1001;
+
+  /* Tata letak di dalam modal */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.modal-close-btn {
+  /* Mengambil style dari .card-content .btn tapi sedikit diubah */
+  padding: 0.6em 1.2em;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #c90c7a; /* Warna pink dari footer */
+  background-color: #c90c7a;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+  align-self: flex-end; /* Pindahkan tombol ke kanan */
+  margin-top: 1rem;
+}
+
+.modal-close-btn:hover {
+  background-color: #a10a62;
+  border-color: #a10a62;
+}

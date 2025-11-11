@@ -1,3 +1,4 @@
+// src/Header.jsx
 import React from 'react';
 
 const Header = () => {
@@ -5,8 +6,7 @@ const Header = () => {
     <header className="header">
       <div className="container"> 
         <div className="header-logo">
-          {/* Pastikan /logo-desa.png ada di folder public/ */}
-          <img src="/src/assets/logo-desa.png" alt="Logo Desa" />
+          <img src="/logo-desa.png" alt="Logo Desa" />
         </div>
         <nav className="header-nav">
           <a href="#">Lorem ipsum</a>

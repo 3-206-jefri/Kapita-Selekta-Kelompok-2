@@ -1,26 +1,62 @@
+// src/CardGrid.jsx
 import React from 'react';
 import Card from './Card'; 
 
-const CardGrid = () => {
+const CardGrid = ({ onCardClick }) => {
   
-  // 6 item sesuai screenshot
   const cardData = [
-    { title: 'Modul LITERASI DIGITAL', icon: '/src/assets/Literasi Digital 1.png' },
-    { title: 'Modul KEAMANAN SIBER', icon: '/src/assets/Keamanan 1.png' },
-    { title: 'Pre-Test', icon: '/src/assets/Pre Test 1.png' },
-    { title: 'Post-Test', icon: '/src/assets/Post Test 1.png' },
-    { title: 'Grafik', icon: '/src/assets/Grafik 2.png' },
-    { title: 'Data', icon: '/src/assets/Data 1.png' },
+    { 
+      id: 1,
+      title: 'Modul LITERASI DIGITAL', 
+      icon: '/Literasi Digital 1.png', // DIUBAH
+      modalTitle: 'Modul Literasi Digital',
+      description: 'Deskripsi lengkap tentang Modul Literasi Digital ada di sini. Anda bisa menjelaskan apa saja yang akan dipelajari oleh masyarakat desa.'
+    },
+    { 
+      id: 2,
+      title: 'Modul KEAMANAN SIBER', 
+      icon: '/Keamanan 1.png', // DIUBAH
+      modalTitle: 'Modul Keamanan Siber',
+      description: 'Penjelasan mendalam mengenai Modul Keamanan Siber. Mencakup cara menghindari penipuan, mengamankan data pribadi, dan lainnya.'
+    },
+    { 
+      id: 3,
+      title: 'Pre-Test', 
+      icon: '/Pre Test 1.png', // DIUBAH
+      modalTitle: 'Pre-Test Literasi Digital',
+      description: 'Tes ini bertujuan untuk mengukur pemahaman awal Anda tentang literasi digital dan keamanan siber sebelum memulai modul.'
+    },
+    { 
+      id: 4,
+      title: 'Post-Test', 
+      icon: '/Post Test 1.png', // DIUBAH
+      modalTitle: 'Post-Test Literasi Digital',
+      description: 'Setelah menyelesaikan modul, tes ini akan mengukur seberapa besar peningkatan pemahaman Anda. Semoga berhasil!'
+    },
+    { 
+      id: 5,
+      title: 'Grafik', 
+      icon: '/Grafik 2.png', // DIUBAH
+      modalTitle: 'Grafik Perkembangan',
+      description: 'Lihat data dan grafik perkembangan nilai pre-test dan post-test dari seluruh peserta di Desa Way Hui.'
+    },
+    { 
+      id: 6,
+      title: 'Data', 
+      icon: '/Data 1.png', // DIUBAH
+      modalTitle: 'Data Peserta',
+      description: 'Halaman ini berisi data mentah dari para peserta yang telah mengikuti program literasi digital (hanya dapat diakses oleh admin).'
+    },
   ];
-  // CATATAN: Pastikan Anda punya semua 6 gambar ikon di folder /public/
 
   return (
     <section id="card-grid" className="card-grid">
-      {cardData.map((card, index) => (
+      {cardData.map((card) => (
         <Card 
-          key={index} 
+          key={card.id}
           title={card.title} 
           icon={card.icon}
+          onClick={() => onCardClick(card)} 
         />
       ))}
     </section>
