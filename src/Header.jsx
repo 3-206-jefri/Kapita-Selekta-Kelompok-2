@@ -9,7 +9,6 @@ const Header = () => {
         </div>
         
         <div className="header-button">
-          <a href="#" className="btn-primary">Lorem ipsum</a>
         </div>
       </div>
     </header>
