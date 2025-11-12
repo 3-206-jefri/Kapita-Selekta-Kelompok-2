@@ -7,12 +7,7 @@ const Header = () => {
         <div className="header-logo">
           <img src="/logo-desa.png" alt="Logo Desa" />
         </div>
-        <nav className="header-nav">
-          <a href="#">Lorem ipsum</a>
-          <a href="#">Lorem ipsum</a>
-          <a href="#">Lorem ipsum</a>
-          <a href="#">Lorem ipsum</a>
-        </nav>
+        
         <div className="header-button">
           <a href="#" className="btn-primary">Lorem ipsum</a>
         </div>
