@@ -407,6 +407,25 @@ body {
   filter: brightness(1.15); 
 }
 
+.btn-modal-link {
+  display: inline-block; /* Memastikan padding dan centering bekerja */
+  padding: 0.6em 1.2em;
+  font-size: 1.15rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(to right, #c0c0c0, #007bff);
+  transition: filter 0.25s;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none; /* Menghilangkan underline bawaan link */
+}
+
+.btn-modal-link:hover {
+  filter: brightness(1.15);
+  color: #007bff; 
+}
+
 /* --- 9. BAR CHART --- */
 
 .new-chart-container {

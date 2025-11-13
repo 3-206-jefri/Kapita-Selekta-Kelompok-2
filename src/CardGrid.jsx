@@ -19,16 +19,22 @@ const CardGrid = ({ onCardClick }) => {
       modalTitle: 'Modul Literasi Digital',
       description: (
         <>
-          Deskripsi lengkap tentang Modul Literasi Digital ada di sini. 
-          Anda bisa menjelaskan apa saja yang akan dipelajari oleh masyarakat desa.
-          <br /><br /> 
-          <a 
-            href="https://www.canva.com/design/DAG3c2uoO10/4WPhkxLiFYZxa0gedg3brQ/edit?utm_content=DAG3c2uoO10&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            Klik di sini untuk membuka Modul di Canva
-          </a>
+          {/* Menggunakan tag <p> untuk deskripsi */}
+          <p>
+            Buka link di bawah untuk menuju ke modul.
+          </p>
+          
+          {/* Wrapper untuk memposisikan tombol di tengah */}
+          <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+            <a 
+              href="https://www.canva.com/design/DAG3c2uoO10/4WPhkxLiFYZxa0gedg3brQ/edit?utm_content=DAG3c2uoO10&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-modal-link" // Menerapkan class CSS baru
+            >
+              Buka Modul di Canva
+            </a>
+          </div>
         </>
       )
     },
@@ -37,21 +43,78 @@ const CardGrid = ({ onCardClick }) => {
       title: 'Modul KEAMANAN SIBER', 
       icon: '/Keamanan 1.png',
       modalTitle: 'Modul Keamanan Siber',
-      description: 'Penjelasan mendalam mengenai Modul Keamanan Siber. Mencakup cara menghindari penipuan, mengamankan data pribadi, dan lainnya.'
+      description: (
+        <>
+          {/* Menggunakan tag <p> untuk deskripsi */}
+          <p>
+            Buka link di bawah untuk menuju ke modul.
+          </p>
+          
+          {/* Wrapper untuk memposisikan tombol di tengah */}
+          <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+            <a 
+              href="https://www.canva.com/design/DAG4ZW8CLkU/UexPZLy-7h5LrZOWHKdnbg/edit?ui=eyJBIjp7fX0" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-modal-link" // Menerapkan class CSS baru
+            >
+              Buka Modul di Canva
+            </a>
+          </div>
+        </>
+      )
     },
     { 
       id: 3,
       title: 'Pre-Test', 
       icon: '/Pre Test 1.png',
       modalTitle: 'Pre-Test Literasi Digital',
-      description: 'Tes ini bertujuan untuk mengukur pemahaman awal Anda tentang literasi digital dan keamanan siber sebelum memulai modul.'
+      description: (
+        <>
+          {/* Menggunakan tag <p> untuk deskripsi */}
+          <p>
+            Buka link di bawah untuk menuju ke Pre-Test.
+          </p>
+          
+          {/* Wrapper untuk memposisikan tombol di tengah */}
+          <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+            <a 
+              href="https://wayground.com/admin/quiz/69132b6e7215406c1e22cafe?source=quiz_share" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-modal-link" // Menerapkan class CSS baru
+            >
+              Menuju Pre-Test
+            </a>
+          </div>
+        </>
+      )
     },
     { 
       id: 4,
       title: 'Post-Test', 
       icon: '/Post Test 1.png',
       modalTitle: 'Post-Test Literasi Digital',
-      description: 'Setelah menyelesaikan modul, tes ini akan mengukur seberapa besar peningkatan pemahaman Anda. Semoga berhasil!'
+      description: (
+        <>
+          {/* Menggunakan tag <p> untuk deskripsi */}
+          <p>
+            Buka link di bawah untuk menuju ke Post-Test.
+          </p>
+          
+          {/* Wrapper untuk memposisikan tombol di tengah */}
+          <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+            <a 
+              href="https://wayground.com/admin/quiz/691346f68eb811ab3fa7b1ea?source=quiz_share" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-modal-link" // Menerapkan class CSS baru
+            >
+              Menuju Post-Test
+            </a>
+          </div>
+        </>
+      )
     },
     
     { 
