@@ -3,7 +3,7 @@ import Header from './Header';
 import Hero from './Hero';
 import CardGrid from './CardGrid';
 import Footer from './Footer';
-import Modal from './Modal'; 
+import Modal from './modal'; 
 
 function App() {
   const [modalContent, setModalContent] = useState(null);
