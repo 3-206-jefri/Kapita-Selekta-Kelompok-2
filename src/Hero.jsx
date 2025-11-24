@@ -1,6 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Hero = () => {
+  // Ganti src ini dengan nama file foto asli Anda di folder public
+  const slides = [
+    { id: 1, src: '/public/FotoKegiatan.jpg', caption: 'Musyawarah Desa Penetapan IDM' },
+    { id: 2, src: '/public/FotoKegiatan4.jpg', caption: 'Sosialisasi Literasi Digital' },
+    { id: 3, src: '/Public/FotoKegiatan2.jpg', caption: 'Sosialisasi Keamanan Siber' },
+    { id: 3, src: '/public/FotoKegiatan3.jpg', caption: 'Peserta Sosialisasi '}
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
   return (
     <section className="hero">
       <div className="container">
@@ -9,16 +31,37 @@ const Hero = () => {
         </div>
       </div>
       
+      {/* Container Background Gradient Tetap Ada */}
       <div className="hero-map-container">
-        <div className="hero-map-frame">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15889.589831154378!2d105.3194098416453!3d-5.36701049972322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c5c363f03b51%3A0x60f4c2e68f303abe!2sWay%20Hui%2C%20South%20Jati%20Agung%2C%20South%20Lampung%20Regency%2C%20Lampung!5e0!3m2!1sen!2sid!4v1731241712418!5m2!1sen!2sid" 
-            width="100%" 
-            height="100%" 
-            allowFullScreen="" 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade">
-          </iframe>
+        
+        {/* Frame Slider Baru */}
+        <div className="hero-slider-frame">
+          
+          <div className="slider-window">
+            {/* Bagian Track yang Diberi Animasi Slide */}
+            <div 
+              className="slider-track"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {slides.map((slide) => (
+                <div key={slide.id} className="slide-item">
+                  <img src={slide.src} alt={slide.caption} />
+                  <div className="slide-caption">
+                    <p>{slide.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tombol Navigasi */}
+          <button className="slider-btn prev-btn" onClick={prevSlide}>
+            <i className='bx bx-chevron-left'></i>
+          </button>
+          <button className="slider-btn next-btn" onClick={nextSlide}>
+            <i className='bx bx-chevron-right'></i>
+          </button>
+
         </div>
       </div>
     </section>

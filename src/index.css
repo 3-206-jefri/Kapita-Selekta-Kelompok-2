@@ -79,6 +79,9 @@ body {
 }
 
 /* --- 4. HERO  --- */
+/* ... (Gaya CSS lain sebelum bagian 4 tetap sama) ... */
+
+/* --- 4. HERO  --- */
 .hero {
   width: 100%;
   padding: 4rem 0 0 0;
@@ -126,11 +129,97 @@ body {
   overflow: hidden;
   height: 350px;
 }
-.hero-map-frame iframe {
+/* Frame Slider (Menggantikan posisi map frame) */
+.hero-slider-frame {
+  width: 90%;
+  max-width: 800px;
+  height: 400px;
+  border-radius: 24px;
+  background-color: #000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+/* Jendela Masking */
+.slider-window {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* KUNCI ANIMASI: Track yang bergerak */
+.slider-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* Animasi transisi geser yang halus */
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Item Gambar */
+.slide-item {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Caption Transparan */
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(3px);
+  font-size: 1.1rem;
+}
+
+/* Tombol Panah */
+.slider-btn {
+  position: absolute;
+  background-color: #2a2a6b;
+  color: white;
   border: none;
-  border-radius: 12px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.slider-btn:hover {
+  background-color: #c90c7a;
+  transform: scale(1.1);
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+/* Responsif di HP */
+@media (max-width: 600px) {
+  .hero-slider-frame {
+    height: 250px;
+  }
 }
 .swoosh-left {
   position: absolute;
