@@ -6,7 +6,7 @@ const Hero = () => {
   // 2. ID harus unik (item terakhir diubah jadi id: 4)
   // 3. Typo '/Public' diperbaiki jadi huruf kecil
   const slides = [
-    { id: 1, src: '/FotoKegiatan.jpg', caption: 'Musyawarah Desa Penetapan IDM' },
+    { id: 1, src: '/FotoKegiatan.jpg', caption: 'Dokumentasi Sosialisasi' },
     { id: 2, src: '/FotoKegiatan4.jpg', caption: 'Sosialisasi Literasi Digital' },
     { id: 3, src: '/FotoKegiatan2.jpg', caption: 'Sosialisasi Keamanan Siber' },
     { id: 4, src: '/FotoKegiatan3.jpg', caption: 'Peserta Sosialisasi '}
