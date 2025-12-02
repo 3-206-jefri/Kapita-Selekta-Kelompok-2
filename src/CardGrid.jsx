@@ -19,6 +19,12 @@ const CardGrid = ({ onCardClick }) => {
       modalTitle: 'Modul Literasi Digital',
       description: (
         <>
+          {/* Deskripsi Baru */}
+          <p style={{ marginBottom: '1rem' }}>
+            Panduan menjadi pengguna internet yang bijak. Pelajari etika digital, 
+            cara mengenali berita hoaks, dan kemampuan berpikir kritis dalam menyaring informasi.
+          </p>
+          
           <p>
             Klik tombol di bawah untuk membuka atau mengunduh modul dalam format PDF.
           </p>
@@ -43,6 +49,12 @@ const CardGrid = ({ onCardClick }) => {
       modalTitle: 'Modul Keamanan Siber',
       description: (
         <>
+           {/* Deskripsi Baru */}
+          <p style={{ marginBottom: '1rem' }}>
+            Lindungi data dan perangkat Anda dari kejahatan siber. Kenali ancaman 
+            seperti Phishing dan Malware, serta pelajari cara mengamankan akun dari penipuan digital.
+          </p>
+
           <p>
             Klik tombol di bawah untuk membuka atau mengunduh modul dalam format PDF.
           </p>
