@@ -14,7 +14,7 @@ const CardGrid = ({ onCardClick }) => {
     { 
       id: 1,
       title: 'Modul LITERASI DIGITAL', 
-      icon: '/Literasi Digital 1.png',
+      icon: '/public/LiterasiDigital1.png',
       modalTitle: 'Modul Literasi Digital',
       description: (
         <>
@@ -24,7 +24,7 @@ const CardGrid = ({ onCardClick }) => {
           
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
-              href="/public/Literasi Digital (1).pdf"  
+              href="/public/LiterasiDigital.pdf"  
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-modal-link"
@@ -38,7 +38,7 @@ const CardGrid = ({ onCardClick }) => {
     { 
       id: 2,
       title: 'Modul KEAMANAN SIBER', 
-      icon: '/Keamanan 1.png',
+      icon: '/public/Keamanan1.png',
       modalTitle: 'Modul Keamanan Siber',
       description: (
         <>
@@ -48,7 +48,7 @@ const CardGrid = ({ onCardClick }) => {
           
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
-              href="/public/Modul Keamanan Siber  (1).pdf" 
+              href="/public/ModulKeamananSiber.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-modal-link"
@@ -62,7 +62,7 @@ const CardGrid = ({ onCardClick }) => {
     { 
       id: 3,
       title: 'Pre-Test', 
-      icon: '/Pre Test 1.png',
+      icon: '/public/PreTest1.png',
       modalTitle: 'Pre-Test Literasi Digital',
       description: (
         <>
@@ -88,7 +88,7 @@ const CardGrid = ({ onCardClick }) => {
     { 
       id: 4,
       title: 'Post-Test', 
-      icon: '/Post Test 1.png',
+      icon: '/public/PostTest1.png',
       modalTitle: 'Post-Test Literasi Digital',
       description: (
         <>
@@ -115,7 +115,7 @@ const CardGrid = ({ onCardClick }) => {
     { 
       id: 5,
       title: 'Grafik', 
-      icon: '/Grafik 2.png',
+      icon: '/public/Grafik1.png',
       modalTitle: 'Grafik Perkembangan Peserta',
       description: (
         <>
@@ -138,7 +138,7 @@ const CardGrid = ({ onCardClick }) => {
     { 
       id: 6,
       title: 'Data', 
-      icon: '/Data 1.png',
+      icon: '/public/Data1.png',
       modalTitle: 'Data Peserta',
       description: (
         <pre className="data-preformatted">
