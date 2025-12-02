@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 const Hero = () => {
   // Ganti src ini dengan nama file foto asli Anda di folder public
   const slides = [
-    { id: 1, src: '/public/FotoKegiatan.jpg', caption: 'Musyawarah Desa Penetapan IDM' },
-    { id: 2, src: '/public/FotoKegiatan4.jpg', caption: 'Sosialisasi Literasi Digital' },
-    { id: 3, src: '/Public/FotoKegiatan2.jpg', caption: 'Sosialisasi Keamanan Siber' },
-    { id: 3, src: '/public/FotoKegiatan3.jpg', caption: 'Peserta Sosialisasi '}
+    { id: 1, src: 'FotoKegiatan.jpg', caption: 'Musyawarah Desa Penetapan IDM' },
+    { id: 2, src: 'FotoKegiatan4.jpg', caption: 'Sosialisasi Literasi Digital' },
+    { id: 3, src: 'FotoKegiatan2.jpg', caption: 'Sosialisasi Keamanan Siber' },
+    { id: 3, src: 'FotoKegiatan3.jpg', caption: 'Peserta Sosialisasi '}
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
