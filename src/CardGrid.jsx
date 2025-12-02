@@ -10,7 +10,6 @@ const CardGrid = ({ onCardClick }) => {
   const nilaiPreTest_percent = (nilaiPreTest_raw / totalPeserta) * 100;
   const nilaiPostTest_percent = (nilaiPostTest_raw / totalPeserta) * 100;
 
-
   const cardData = [
     { 
       id: 1,
@@ -19,20 +18,18 @@ const CardGrid = ({ onCardClick }) => {
       modalTitle: 'Modul Literasi Digital',
       description: (
         <>
-          {/* Menggunakan tag <p> untuk deskripsi */}
           <p>
-            Buka link di bawah untuk menuju ke modul.
+            Klik tombol di bawah untuk membuka atau mengunduh modul dalam format PDF.
           </p>
           
-          {/* Wrapper untuk memposisikan tombol di tengah */}
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
-              href="https://www.canva.com/design/DAG3c2uoO10/4WPhkxLiFYZxa0gedg3brQ/edit?utm_content=DAG3c2uoO10&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+              href="/public/Literasi Digital (1).pdf"  
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-modal-link" // Menerapkan class CSS baru
+              className="btn-modal-link"
             >
-              Buka Modul di Canva
+              Buka PDF Literasi Digital
             </a>
           </div>
         </>
@@ -45,20 +42,18 @@ const CardGrid = ({ onCardClick }) => {
       modalTitle: 'Modul Keamanan Siber',
       description: (
         <>
-          {/* Menggunakan tag <p> untuk deskripsi */}
           <p>
-            Buka link di bawah untuk menuju ke modul.
+            Klik tombol di bawah untuk membuka atau mengunduh modul dalam format PDF.
           </p>
           
-          {/* Wrapper untuk memposisikan tombol di tengah */}
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
-              href="https://www.canva.com/design/DAG4ZW8CLkU/UexPZLy-7h5LrZOWHKdnbg/edit?ui=eyJBIjp7fX0" 
+              href="/public/Modul Keamanan Siber  (1).pdf" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-modal-link" // Menerapkan class CSS baru
+              className="btn-modal-link"
             >
-              Buka Modul di Canva
+              Buka PDF Keamanan Siber
             </a>
           </div>
         </>
