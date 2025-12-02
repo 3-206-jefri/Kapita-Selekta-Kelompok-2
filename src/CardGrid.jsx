@@ -3,10 +3,10 @@ import Card from './Card';
 import BarChart from './BarChart'; 
 
 const CardGrid = ({ onCardClick }) => {
-  const totalPeserta = 50; 
+  const totalPeserta = 20; 
 
-  const nilaiPreTest_raw = 34.5;  
-  const nilaiPostTest_raw = 37; 
+  const nilaiPreTest_raw = 13.8;  
+  const nilaiPostTest_raw = 14.8; 
   const nilaiPreTest_percent = (nilaiPreTest_raw / totalPeserta) * 100;
   const nilaiPostTest_percent = (nilaiPostTest_raw / totalPeserta) * 100;
 
