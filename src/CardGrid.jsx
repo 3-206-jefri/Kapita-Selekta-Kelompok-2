@@ -7,10 +7,11 @@ const CardGrid = ({ onCardClick }) => {
 
   const nilaiPreTest_raw = 13.8;  
   const nilaiPostTest_raw = 14.8; 
+  
+  // Perhitungan Persentase
   const nilaiPreTest_percent = (nilaiPreTest_raw / totalPeserta) * 100;
   const nilaiPostTest_percent = (nilaiPostTest_raw / totalPeserta) * 100;
 
-  // PERBAIKAN: Semua path '/public/...' diubah menjadi '/...'
   const cardData = [
     { 
       id: 1,
@@ -19,15 +20,12 @@ const CardGrid = ({ onCardClick }) => {
       modalTitle: 'Modul Literasi Digital',
       description: (
         <>
-          {/* Deskripsi Baru */}
           <p style={{ marginBottom: '1rem' }}>
             Panduan menjadi pengguna internet yang bijak. Pelajari etika digital, 
             cara mengenali berita hoaks, dan kemampuan berpikir kritis dalam menyaring informasi.
           </p>
           
-          <p>
-            Klik tombol di bawah untuk membuka modul.
-          </p>
+          <p>Klik tombol di bawah untuk membuka atau mengunduh modul dalam format PDF.</p>
           
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
@@ -49,15 +47,12 @@ const CardGrid = ({ onCardClick }) => {
       modalTitle: 'Modul Keamanan Siber',
       description: (
         <>
-           {/* Deskripsi Baru */}
           <p style={{ marginBottom: '1rem' }}>
             Lindungi data dan perangkat Anda dari kejahatan siber. Kenali ancaman 
             seperti Phishing dan Malware, serta pelajari cara mengamankan akun dari penipuan digital.
           </p>
 
-          <p>
-            Klik tombol di bawah untuk membuka modul.
-          </p>
+          <p>Klik tombol di bawah untuk membuka atau mengunduh modul dalam format PDF.</p>
           
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
@@ -79,10 +74,7 @@ const CardGrid = ({ onCardClick }) => {
       modalTitle: 'Pre-Test Literasi Digital',
       description: (
         <>
-          <p>
-            Buka link di bawah untuk menuju ke Pre-Test.
-          </p>
-          
+          <p>Buka link di bawah untuk menuju ke Pre-Test.</p>
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
               href="https://wayground.com/admin/quiz/69132b6e7215406c1e22cafe?source=quiz_share" 
@@ -103,10 +95,7 @@ const CardGrid = ({ onCardClick }) => {
       modalTitle: 'Post-Test Literasi Digital',
       description: (
         <>
-          <p>
-            Buka link di bawah untuk menuju ke Post-Test.
-          </p>
-          
+          <p>Buka link di bawah untuk menuju ke Post-Test.</p>
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
               href="https://wayground.com/admin/quiz/691346f68eb811ab3fa7b1ea?source=quiz_share" 
@@ -128,12 +117,11 @@ const CardGrid = ({ onCardClick }) => {
       description: (
         <>
           <p>
-            Grafik ini menunjukkan perbandingan jumlah peserta 
-            yang berhasil sebelum (Pre-Test) dan sesudah (Post-Test) 
-            mengikuti modul, dari total {totalPeserta} peserta.
+            Grafik ini menunjukkan persentase rata-rata nilai peserta 
+            sebelum (Pre-Test) dan sesudah (Post-Test).
           </p>
           
-          {/* PERBAIKAN: Menghapus props yang tidak digunakan di BarChart.jsx */}
+          {/* PERBAIKAN: Mengirim nilai PERSEN ke BarChart */}
           <BarChart 
             preTestPercent={nilaiPreTest_percent} 
             postTestPercent={nilaiPostTest_percent} 
