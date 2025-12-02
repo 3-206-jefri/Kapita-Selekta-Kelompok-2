@@ -27,13 +27,15 @@ const Footer = () => {
           <div className="footer-map-section">
             <h3>Lokasi Kantor Desa</h3>
             <div className="map-placeholder-footer">
+              {/* PERBAIKAN: Link Google Maps menggunakan HTTPS dan query lokasi */}
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.290518712061!2d105.32360237498393!3d-5.371261394607736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c5b3b6b66911%3A0xea3c3b092f026a11!2sKantor%20Desa%20Way%20Hui!5e0!3m2!1sen!2sid!4v1731241595168!5m2!1sen!2sid" 
+                src="https://maps.google.com/maps?q=Kantor%20Balai%20Desa%20Way%20Hui&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 allowFullScreen="" 
                 loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade">
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Lokasi Kantor Desa">
               </iframe>
             </div>
           </div>
@@ -41,13 +43,15 @@ const Footer = () => {
           <div className="footer-map-section">
             <h3>Wilayah Desa</h3>
             <div className="map-placeholder-footer">
+               {/* PERBAIKAN: Link Google Maps untuk Wilayah Desa */}
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15889.589831154378!2d105.3194098416453!3d-5.36701049972322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c5c363f03b51%3A0x60f4c2e68f303abe!2sWay%20Hui%2C%20South%20Jati%20Agung%2C%20South%20Lampung%20Regency%2C%20Lampung!5e0!3m2!1sen!2sid!4v1731241712418!5m2!1sen!2sid" 
+                src="https://maps.google.com/maps?q=Desa%20Way%20Hui%20Lampung%20Selatan&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 allowFullScreen="" 
                 loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade">
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Wilayah Desa">
               </iframe>
             </div>
           </div>

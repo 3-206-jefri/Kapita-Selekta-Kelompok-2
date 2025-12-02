@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 
 const Hero = () => {
-  // Ganti src ini dengan nama file foto asli Anda di folder public
+  // PERBAIKAN: 
+  // 1. Jalur gambar tidak perlu pakai '/public', cukup '/'
+  // 2. ID harus unik (item terakhir diubah jadi id: 4)
+  // 3. Typo '/Public' diperbaiki jadi huruf kecil
   const slides = [
-    { id: 1, src: 'FotoKegiatan.jpg', caption: 'Musyawarah Desa Penetapan IDM' },
-    { id: 2, src: 'FotoKegiatan4.jpg', caption: 'Sosialisasi Literasi Digital' },
-    { id: 3, src: 'FotoKegiatan2.jpg', caption: 'Sosialisasi Keamanan Siber' },
-    { id: 3, src: 'FotoKegiatan3.jpg', caption: 'Peserta Sosialisasi '}
+    { id: 1, src: '/FotoKegiatan.jpg', caption: 'Musyawarah Desa Penetapan IDM' },
+    { id: 2, src: '/FotoKegiatan4.jpg', caption: 'Sosialisasi Literasi Digital' },
+    { id: 3, src: '/FotoKegiatan2.jpg', caption: 'Sosialisasi Keamanan Siber' },
+    { id: 4, src: '/FotoKegiatan3.jpg', caption: 'Peserta Sosialisasi '}
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

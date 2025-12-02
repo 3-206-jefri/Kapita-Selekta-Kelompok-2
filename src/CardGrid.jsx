@@ -10,11 +10,12 @@ const CardGrid = ({ onCardClick }) => {
   const nilaiPreTest_percent = (nilaiPreTest_raw / totalPeserta) * 100;
   const nilaiPostTest_percent = (nilaiPostTest_raw / totalPeserta) * 100;
 
+  // PERBAIKAN: Semua path '/public/...' diubah menjadi '/...'
   const cardData = [
     { 
       id: 1,
       title: 'Modul LITERASI DIGITAL', 
-      icon: '/public/LiterasiDigital1.png',
+      icon: '/LiterasiDigital1.png',
       modalTitle: 'Modul Literasi Digital',
       description: (
         <>
@@ -24,7 +25,7 @@ const CardGrid = ({ onCardClick }) => {
           
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
-              href="/public/LiterasiDigital.pdf"  
+              href="/LiterasiDigital.pdf"  
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-modal-link"
@@ -38,7 +39,7 @@ const CardGrid = ({ onCardClick }) => {
     { 
       id: 2,
       title: 'Modul KEAMANAN SIBER', 
-      icon: '/public/Keamanan1.png',
+      icon: '/Keamanan1.png',
       modalTitle: 'Modul Keamanan Siber',
       description: (
         <>
@@ -48,7 +49,7 @@ const CardGrid = ({ onCardClick }) => {
           
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
-              href="/public/ModulKeamananSiber.pdf" 
+              href="/ModulKeamananSiber.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn-modal-link"
@@ -62,22 +63,20 @@ const CardGrid = ({ onCardClick }) => {
     { 
       id: 3,
       title: 'Pre-Test', 
-      icon: '/public/PreTest1.png',
+      icon: '/PreTest1.png',
       modalTitle: 'Pre-Test Literasi Digital',
       description: (
         <>
-          {/* Menggunakan tag <p> untuk deskripsi */}
           <p>
             Buka link di bawah untuk menuju ke Pre-Test.
           </p>
           
-          {/* Wrapper untuk memposisikan tombol di tengah */}
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
               href="https://wayground.com/admin/quiz/69132b6e7215406c1e22cafe?source=quiz_share" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-modal-link" // Menerapkan class CSS baru
+              className="btn-modal-link"
             >
               Menuju Pre-Test
             </a>
@@ -88,22 +87,20 @@ const CardGrid = ({ onCardClick }) => {
     { 
       id: 4,
       title: 'Post-Test', 
-      icon: '/public/PostTest1.png',
+      icon: '/PostTest1.png',
       modalTitle: 'Post-Test Literasi Digital',
       description: (
         <>
-          {/* Menggunakan tag <p> untuk deskripsi */}
           <p>
             Buka link di bawah untuk menuju ke Post-Test.
           </p>
           
-          {/* Wrapper untuk memposisikan tombol di tengah */}
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a 
               href="https://wayground.com/admin/quiz/691346f68eb811ab3fa7b1ea?source=quiz_share" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-modal-link" // Menerapkan class CSS baru
+              className="btn-modal-link"
             >
               Menuju Post-Test
             </a>
@@ -111,11 +108,10 @@ const CardGrid = ({ onCardClick }) => {
         </>
       )
     },
-    
     { 
       id: 5,
       title: 'Grafik', 
-      icon: '/public/Grafik1.png',
+      icon: '/Grafik1.png',
       modalTitle: 'Grafik Perkembangan Peserta',
       description: (
         <>
@@ -125,12 +121,10 @@ const CardGrid = ({ onCardClick }) => {
             mengikuti modul, dari total {totalPeserta} peserta.
           </p>
           
+          {/* PERBAIKAN: Menghapus props yang tidak digunakan di BarChart.jsx */}
           <BarChart 
             preTestPercent={nilaiPreTest_percent} 
-            preTestValue={nilaiPreTest_raw}       
             postTestPercent={nilaiPostTest_percent} 
-            postTestValue={nilaiPostTest_raw}     
-            maxValue={totalPeserta}               
           />
         </>
       )
@@ -138,7 +132,7 @@ const CardGrid = ({ onCardClick }) => {
     { 
       id: 6,
       title: 'Data', 
-      icon: '/public/Data1.png',
+      icon: '/Data1.png',
       modalTitle: 'Data Peserta',
       description: (
         <pre className="data-preformatted">
