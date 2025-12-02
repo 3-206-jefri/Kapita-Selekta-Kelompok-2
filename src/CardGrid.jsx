@@ -26,7 +26,7 @@ const CardGrid = ({ onCardClick }) => {
           </p>
           
           <p>
-            Klik tombol di bawah untuk membuka atau mengunduh modul dalam format PDF.
+            Klik tombol di bawah untuk membuka modul.
           </p>
           
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
@@ -56,7 +56,7 @@ const CardGrid = ({ onCardClick }) => {
           </p>
 
           <p>
-            Klik tombol di bawah untuk membuka atau mengunduh modul dalam format PDF.
+            Klik tombol di bawah untuk membuka modul.
           </p>
           
           <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
