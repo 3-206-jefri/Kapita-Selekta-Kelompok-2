@@ -5,8 +5,8 @@ import BarChart from './BarChart';
 const CardGrid = ({ onCardClick }) => {
   const totalPeserta = 50; 
 
-  const nilaiPreTest_raw = 20;  
-  const nilaiPostTest_raw = 44; 
+  const nilaiPreTest_raw = 34.5;  
+  const nilaiPostTest_raw = 37; 
   const nilaiPreTest_percent = (nilaiPreTest_raw / totalPeserta) * 100;
   const nilaiPostTest_percent = (nilaiPostTest_raw / totalPeserta) * 100;
 
@@ -147,10 +147,10 @@ const CardGrid = ({ onCardClick }) => {
       modalTitle: 'Data Peserta',
       description: (
         <pre className="data-preformatted">
-{`Peserta Yang Hadir            :
-Peserta Yang Mengikuti Test   :
-Peserta Yang Lulus Pretest    :
-Peserta Yang Lulus Posttest   :`}
+{`Peserta Yang Hadir            : 22
+Peserta Yang Mengikuti Test   : 20
+Peserta Yang Lulus Pretest    : 14
+Peserta Yang Lulus Posttest   : 15`}
         </pre>
       )
     },
